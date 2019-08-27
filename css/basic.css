@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Noto Sans TC', sans-serif, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微軟雅黑", Arial, sans-serif;
 }
 
 html, body {
@@ -8,6 +9,6 @@ html, body {
   background-color: white;
 }
 
-html, body, h1, h2, h3, h4, h5, h6, button, input {
+html, body, h1, h2, h3, h4, h5, h6, button, input, p {
   font-family: 'Noto Sans TC', sans-serif, "Helvetica Neue", Helvetica, "Hiragino Sans GB", "Microsoft YaHei", "微軟雅黑", Arial, sans-serif;
 }
