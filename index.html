@@ -17,34 +17,37 @@
 <body>
   <div id="app">
   <v-app>
-    <!-- header start -->
-    <header id="navheader">
-      <div class="logo">
-        <img src="img/penguin-edge.png">
-      </div>
-    </header>
-    <!-- header end -->
+    <div id="background-wrapper">
+      <!-- header start -->
+      <header id="navheader">
+        <div class="logo">
+          <img src="img/penguin-edge.png">
+        </div>
+      </header>
+      <!-- header end -->
+      
+      <!-- title section start -->
+      <section id="title-section">
+        <v-container>
+          <v-row>
+            <v-col lg="12" xl="10" offset-xl="1">
+              <v-row>
+                <v-col cols="6" class="left">
+                  <p class="first font-weight-bold" style="font-size: 3rem; text-shadow: 0 2px 5px rgba(0,0,0,0.3);">老師、學生最強大的</p>
+                  <p class="font-weight-bold" style="font-size: 3rem; text-shadow: 0 2px 5px rgba(0,0,0,0.3);">程式批改 & 輔助教學系統</p>
+                  <v-btn class="start-btn" rounded color="primary" large dark @click="toPenguin">Get Started</v-btn>
+                </v-col>
+                <v-col cols="6" class="right">
+                  <img class="mac" src="img/mac.png" alt="">
+                </v-col>
+              </v-row>
+            </v-col>
+          </v-row>
+        </v-container>
+      </section>
+      <!-- title section end -->
+    </div>
     
-    <!-- title section start -->
-    <section id="title-section">
-      <v-container>
-        <v-row>
-          <v-col cols="10" offset="1">
-            <v-row>
-              <v-col cols="6" class="left">
-                <p class="first font-weight-bold" style="font-size: 3rem;">老師、學生最強大的</p>
-                <p class="font-weight-bold" style="font-size: 3rem;">程式批改 & 輔助教學系統</p>
-                <v-btn class="start-btn" rounded color="primary" large dark @click="toPenguin">Get Started</v-btn>
-              </v-col>
-              <v-col cols="6" class="right">
-                <img class="mac" src="img/mac.png" alt="">
-              </v-col>
-            </v-row>
-          </v-col>
-        </v-row>
-      </v-container>
-    </section>
-    <!-- title section end -->
 
     <!-- how-to-build-section start -->
     <section id="how-to-build-section">
@@ -106,10 +109,10 @@
       <v-row style="padding-top: 70px;">
         <v-col cols="10" offset="1">
           <v-row>
-            <v-col class="teacher" cols="12">
+            <v-col class="teacher mt-12 mb-12" cols="12">
               <v-row>
                 <v-col class="character" cols="5" offset="1">
-                  <div class="icon"><i class="fas fa-user-tie"></i> &nbsp; <span class="font-weight-bold">老師功能</span></div>
+                  <div class="icon">&nbsp; <span class="font-weight-bold" style="color: #E6A23C;">老師功能</span></div>
                   <ul>
                     <li v-for="(item, index) in teacherFunction" :key="index+1">
                       <i :class="item.icon" class="mr-4" style="color:#67C23A;"></i>{{ item.desc }}
@@ -121,13 +124,13 @@
                 </v-col>
               </v-row>
             </v-col>
-            <v-col class="student mt-10" cols="12">
+            <v-col class="student mt-12 mb-12" cols="12">
               <v-row>
                 <v-col cols="6">
                   <img class="char-img" src="img/studentindex.png" alt="">
                 </v-col>
                 <v-col class="character" cols="5" offset="1">
-                  <div class="icon"><i class="fas fa-user"></i> &nbsp; <span class="font-weight-bold">學生功能</span></div>
+                  <div class="icon">&nbsp; <span class="font-weight-bold" style="color: #E6A23C;">學生功能</span></div>
                   <ul>
                     <li v-for="(item, index) in studentFunction" :key="index+1">
                       <i :class="item.icon" class="mr-4" style="color:#67C23A;"></i>{{ item.desc }}
@@ -262,6 +265,13 @@
 </html>
 
 <style>
+  #background-wrapper {
+    height: 100vh;
+    background-image: url('./img/bg.svg');
+    background-size: cover;
+    background-position: bottom; 
+  }
+
   /* navheader */
   #navheader {
     height: 15vh;
@@ -281,11 +291,12 @@
   /* title sction */
   #title-section {
     height: 85vh;
+    color: white;
   }
 
   #title-section .left .first {
-    margin-top: 10vh;
-    margin-bottom: 40px;
+    margin-top: 7vh;
+    margin-bottom: 20px;
   }
 
   #title-section .left .start-btn {
